@@ -15,6 +15,13 @@ body {
   height: 100%;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
+
 .text {
   color: gray;
   font-weight: 700;
@@ -29,4 +36,8 @@ body {
 .logo {
   cursor: pointer;
   width: 200px;
+}
+
+.main {
+  flex: 1;
 }
