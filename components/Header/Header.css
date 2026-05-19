@@ -1,0 +1,50 @@
+.header {
+  border-bottom: 0.1px solid rgb(209 213 219);
+}
+
+.header__content {
+  padding-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.header__menu-center {
+  display: flex;
+  gap: 45px;
+  color: gray;
+  font-weight: 700;
+  padding-top: 10px;
+}
+
+.header__menu-link {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.header__menu-right {
+  margin-top: 10px;
+  display: flex;
+  gap: 20px;
+}
+
+.profile-btn {
+  display: flex;
+  gap: 5px;
+  border: none;
+  background-color: transparent;
+  color: rgb(17 24 39);
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.seller-btn {
+  background-color: transparent;
+  color: rgb(17 24 39);
+  border: 0.1px solid rgb(209 213 219);
+  padding: 5px 15px;
+  border-radius: 20px;
+}
