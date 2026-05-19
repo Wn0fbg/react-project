@@ -1,0 +1,119 @@
+/* Основной контейнер */
+.promo-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #e6e9f2;
+  margin: 4rem 0; /* my-16 = 64px */
+  border-radius: 0.75rem; /* rounded-xl = 12px */
+  overflow: hidden;
+  padding-top: 3.5rem; /* py-14 = 56px */
+  padding-bottom: 3.5rem;
+}
+
+/* Левая картинка (JBL) */
+.promo-card__image-left {
+  max-width: 14rem; /* max-w-56 = 224px */
+  width: 100%;
+  height: auto;
+}
+
+/* Центральный блок с контентом */
+.promo-card__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 0.5rem; /* space-y-2 */
+  padding-left: 1rem; /* px-4 */
+  padding-right: 1rem;
+}
+
+/* Заголовок */
+.promo-card__title {
+  font-size: 1.5rem; /* text-2xl */
+  font-weight: 600; /* font-semibold */
+  max-width: 290px;
+}
+
+/* Описание */
+.promo-card__description {
+  max-width: 343px;
+  font-weight: 500; /* font-medium */
+  color: rgba(31, 41, 55, 0.6); /* gray-800/60 */
+}
+
+/* Кнопка */
+.promo-card__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem; /* gap-1 = 4px */
+  padding: 0.625rem 3rem; /* px-12 py-2.5 */
+  background-color: #ea580c; /* orange-600 */
+  border-radius: 0.375rem; /* rounded-md */
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.promo-card__button:hover {
+  background-color: #c2410c; /* orange-700 */
+}
+
+/* Иконка внутри кнопки */
+.promo-card__button-icon {
+  transition: transform 0.2s ease;
+  width: 16px;
+  height: 16px;
+}
+
+.promo-card__button:hover .promo-card__button-icon {
+  transform: translateX(4px); /* group-hover:translate-x-1 */
+}
+
+/* Правая картинка — десктопная (показывается только на планшетах и выше) */
+.promo-card__image-right--desktop {
+  display: none;
+  max-width: 20rem; /* max-w-80 = 320px */
+  width: 100%;
+  height: auto;
+}
+
+/* Правая картинка — мобильная (показывается только на мобилах) */
+.promo-card__image-right--mobile {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Планшеты и десктопы (768px и выше) */
+@media (min-width: 768px) {
+  .promo-card {
+    flex-direction: row; /* md:flex-row */
+    padding-top: 0; /* md:py-0 */
+    padding-bottom: 0;
+    padding-left: 5rem; /* md:pl-20 = 80px */
+  }
+
+  .promo-card__content {
+    padding-left: 0; /* md:px-0 */
+    padding-right: 0;
+  }
+
+  .promo-card__title {
+    font-size: 1.875rem; /* md:text-3xl = 30px */
+  }
+
+  .promo-card__image-right--desktop {
+    display: block;
+  }
+
+  .promo-card__image-right--mobile {
+    display: none;
+  }
+}
