@@ -1,0 +1,301 @@
+/* Slider.css */
+
+/* Контейнер слайдера */
+.slider-container {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+/* Трек слайдера */
+.slider-track {
+  display: flex;
+  transition: transform 0.7s ease-in-out;
+}
+
+/* Отдельный слайд */
+.slide {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #e6e9f2;
+  padding: 32px 20px;
+  margin-top: 24px;
+  border-radius: 12px;
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Адаптив для планшетов и десктопов */
+@media (min-width: 768px) {
+  .slide {
+    flex-direction: row;
+    padding: 32px 56px;
+  }
+}
+
+/* Контентная часть слайда */
+.slide-content {
+  margin-top: 40px;
+}
+
+@media (min-width: 768px) {
+  .slide-content {
+    margin-top: 0;
+    padding-left: 32px;
+  }
+}
+
+/* Текст предложения */
+.offer-text {
+  font-size: 14px;
+  color: #ea580c;
+  padding-bottom: 4px;
+}
+
+@media (min-width: 768px) {
+  .offer-text {
+    font-size: 16px;
+  }
+}
+
+/* Заголовок слайда */
+.slide-title {
+  max-width: 32rem;
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .slide-title {
+    font-size: 40px;
+    line-height: 48px;
+  }
+}
+
+/* Группа кнопок */
+.button-group {
+  display: flex;
+  align-items: center;
+  margin-top: 16px;
+  gap: 8px;
+}
+
+@media (min-width: 768px) {
+  .button-group {
+    margin-top: 24px;
+  }
+}
+
+/* Основная кнопка */
+.btn-primary {
+  padding: 8px 28px;
+  background-color: #ea580c;
+  border-radius: 9999px;
+  color: white;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 14px;
+}
+
+.btn-primary:hover {
+  background-color: #c2410c;
+  transform: scale(1.05);
+}
+
+@media (min-width: 768px) {
+  .btn-primary {
+    padding: 10px 40px;
+    font-size: 16px;
+  }
+}
+
+/* Вторичная кнопка */
+.btn-secondary {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 24px;
+  font-weight: 500;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 14px;
+  color: #374151;
+}
+
+.btn-secondary:hover {
+  gap: 12px;
+  color: #ea580c;
+}
+
+@media (min-width: 768px) {
+  .btn-secondary {
+    font-size: 16px;
+  }
+}
+
+/* Иконка стрелки */
+.arrow-icon {
+  transition: transform 0.2s ease;
+  width: 16px;
+  height: 16px;
+}
+
+.btn-secondary:hover .arrow-icon {
+  transform: translateX(4px);
+}
+
+/* Контейнер изображения */
+.slide-image {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  justify-content: center;
+}
+
+/* Изображение */
+.slide-img {
+  width: 192px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.slide:hover .slide-img {
+  transform: scale(1.05);
+}
+
+@media (min-width: 768px) {
+  .slide-img {
+    width: 288px;
+  }
+}
+
+/* Точки навигации */
+.slider-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 32px;
+}
+
+/* Отдельная точка */
+.dot {
+  height: 8px;
+  width: 8px;
+  border-radius: 9999px;
+  cursor: pointer;
+  background-color: rgba(107, 114, 128, 0.3);
+  transition: all 0.3s ease;
+}
+
+.dot:hover {
+  background-color: rgba(234, 88, 12, 0.5);
+  transform: scale(1.2);
+}
+
+.dot.active {
+  background-color: #ea580c;
+  width: 24px;
+}
+
+/* Кнопки навигации (влево/вправо) */
+.slider-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 10;
+  color: #ea580c;
+  font-weight: bold;
+}
+
+.slider-nav:hover {
+  background-color: #ea580c;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.slider-nav.prev {
+  left: 20px;
+}
+
+.slider-nav.next {
+  right: 20px;
+}
+
+@media (min-width: 768px) {
+  .slider-nav {
+    width: 50px;
+    height: 50px;
+    font-size: 28px;
+  }
+
+  .slider-nav.prev {
+    left: 30px;
+  }
+
+  .slider-nav.next {
+    right: 30px;
+  }
+}
+
+/* Анимация для слайдов */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.slide {
+  animation: slideIn 0.5s ease-out;
+}
+
+/* Адаптив для мобильных устройств */
+@media (max-width: 480px) {
+  .slide {
+    padding: 20px 15px;
+  }
+
+  .slide-title {
+    font-size: 20px;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+
+  .button-group {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .slider-nav {
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+  }
+}

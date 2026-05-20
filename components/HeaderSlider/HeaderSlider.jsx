@@ -1,9 +1,10 @@
+import { useEffect, useState } from "react";
 import "@/app/globals.css";
 import "./HeaderSlider.css";
 import header_headphone_image from "@/assets/header_headphone_image.png";
 import header_playstation_image from "@/assets/header_playstation_image.png";
 import header_macbook_image from "@/assets/header_macbook_image.png";
-import { useEffect, useState } from "react";
+import Image from "next/image";
 
 const HeaderSlider = () => {
   const sliderData = [
@@ -13,7 +14,7 @@ const HeaderSlider = () => {
       offer: "Limited Time Offer 30% Off",
       buttonText1: "Buy now",
       buttonText2: "Find more",
-      imgSrc: header_headphone_image,
+      imgSrc: header_headphone_image, // Используем импортированную переменную
     },
     {
       id: 2,
@@ -46,7 +47,48 @@ const HeaderSlider = () => {
     setCurrentSlide(index);
   };
 
-  return <></>;
+  return (
+    <div className="container">
+      <div className="slider-container">
+        <div
+          className="slider-track"
+          style={{
+            transform: `translateX(-${currentSlide * 100}%)`,
+          }}
+        >
+          {sliderData.map((slide, index) => (
+            <div key={slide.id} className="slide">
+              <div className="slide-content">
+                <p className="offer-text">{slide.offer}</p>
+                <h1 className="slide-title">{slide.title}</h1>
+                <div className="button-group">
+                  <button className="btn-primary">{slide.buttonText1}</button>
+                  <button className="btn-secondary">{slide.buttonText2}</button>
+                </div>
+              </div>
+              <div className="slide-image">
+                <Image
+                  className="slide-img"
+                  src={slide.imgSrc} // Теперь здесь правильный путь
+                  alt={`Slide ${index + 1}`}
+                />
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="slider-dots">
+          {sliderData.map((_, index) => (
+            <div
+              key={index}
+              onClick={() => handleSliderChange(index)}
+              className={`dot ${currentSlide === index ? "active" : ""}`}
+            ></div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default HeaderSlider;
