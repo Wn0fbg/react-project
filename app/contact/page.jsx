@@ -1,10 +1,12 @@
 "use client";
 
+import Contact from "@/components/Contact/Contact";
+
 export default function ContactPage() {
   return (
     <>
       <div className="main">
-        <h1>Contact Page</h1>
+        <Contact />
       </div>
     </>
   );

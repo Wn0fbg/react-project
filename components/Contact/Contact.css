@@ -1,0 +1,30 @@
+.contact__container-main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 40px 0 100px;
+}
+
+.contact__container-subtitle {
+  margin-bottom: 20px;
+}
+
+.contact__container {
+  display: flex;
+  gap: 40px;
+}
+
+.content-item {
+  display: flex;
+  gap: 10px;
+}
+
+.right-container {
+  padding: 10px;
+  border: 0.1px solid rgb(165, 146, 146);
+}
+
+.content__container-right {
+  display: flex;
+  flex-direction: column;
+}
