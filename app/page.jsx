@@ -1,16 +1,13 @@
 "use client";
-import Header from "@/components/Header/Header";
-import Footer from "@/components/Footer/Footer";
 import HeaderSlider from "@/components/HeaderSlider/HeaderSlider";
 import NewsLetter from "@/components/NewsLetter/NewsLetter";
 import Banner from "@/components/Banner/Banner";
 import FeaturedProduct from "@/components/FeaturedProduct/FeaturedProduct";
 import ProductsHome from "@/components/ProductsHome/ProductsHome";
 
-const Home = () => {
+export default function Home() {
   return (
     <>
-      <Header />
       <div className="main">
         <HeaderSlider />
         <ProductsHome />
@@ -18,9 +15,6 @@ const Home = () => {
         <Banner />
         <NewsLetter />
       </div>
-      <Footer />
     </>
   );
-};
-
-export default Home;
+}

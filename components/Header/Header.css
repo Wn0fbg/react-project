@@ -16,6 +16,15 @@
   color: gray;
   font-weight: 700;
   padding-top: 10px;
+  list-style: none;
+}
+
+.header__menu-center hr {
+  border: none;
+  width: 80%;
+  height: 3px;
+  background-repeat: 10px;
+  background: #ff4141;
 }
 
 .header__menu-link {
@@ -29,6 +38,10 @@
   margin-top: 10px;
   display: flex;
   gap: 20px;
+}
+
+.profile-link {
+  text-decoration: none;
 }
 
 .profile-btn {

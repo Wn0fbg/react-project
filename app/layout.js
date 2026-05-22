@@ -1,5 +1,7 @@
 import { Geist, Geist_Mono, Outfit } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/Header/Header";
+import Footer from "@/components/Footer/Footer";
 
 const outfit = Outfit({ subsets: ["latin"], weight: ["300", "400", "500"] });
 
@@ -11,7 +13,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${outfit.className} text`}>
-      <body>{children}</body>
+      <body>
+        <Header />
+        <div className="main">{children}</div>
+        <Footer />
+      </body>
     </html>
   );
 }
