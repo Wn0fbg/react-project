@@ -65,7 +65,7 @@ const Contact = () => {
                   onChange={(e) => {
                     setFormData({ ...formData, name: e.target.value });
                   }}
-                  className="contact-input"
+                  className="contact-input input"
                 />
                 <input
                   type="email"
@@ -74,7 +74,7 @@ const Contact = () => {
                   onChange={(e) => {
                     setFormData({ ...formData, email: e.target.value });
                   }}
-                  className="contact-input"
+                  className="contact-input input"
                 />
               </div>
 
@@ -86,7 +86,7 @@ const Contact = () => {
                   onChange={(e) =>
                     setFormData({ ...formData, subject: e.target.value })
                   }
-                  className="subject-input"
+                  className="subject-input input"
                 />
                 <textarea
                   rows="6"
@@ -95,7 +95,7 @@ const Contact = () => {
                   onChange={(e) => {
                     setFormData({ ...formData, message: e.target.value });
                   }}
-                  className="textarea"
+                  className="textarea input"
                 />
                 <button type="submit" className="form-btn">
                   <Send className="send-img" />
