@@ -1,10 +1,12 @@
 "use client";
 
+import Profile from "@/components/Profile/Profile";
+
 export default function ProfilePage() {
   return (
     <>
       <div className="main">
-        <h1>Profile Page</h1>
+        <Profile />
       </div>
     </>
   );

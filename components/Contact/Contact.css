@@ -95,5 +95,7 @@
   padding-block: 10px;
   border: none;
   background: rgb(194, 177, 177);
+  color: #fff;
+  font-size: 20px;
   border-radius: 10px;
 }

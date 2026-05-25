@@ -19,6 +19,7 @@ const Header = () => {
     if (pathname === "/shop") return "shop";
     if (pathname === "/about") return "about";
     if (pathname === "/contact") return "contact";
+    if (pathname === "/profile") return "profile";
     return "home";
   };
 
@@ -74,6 +75,7 @@ const Header = () => {
               <button className="profile-btn">
                 <Image src={user_icon} alt="profile" className="profile-img" />
                 Account
+                {getActiveMenu() === "profile"}
               </button>
             </Link>
           </div>
