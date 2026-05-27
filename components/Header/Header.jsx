@@ -70,7 +70,6 @@ const Header = () => {
           </ul>
 
           <div className="header__menu-right">
-            <Image src={searc_icon} alt="search" className="header__search" />
             <Link href="/profile" className="profile-link">
               <button className="profile-btn">
                 <Image src={user_icon} alt="profile" className="profile-img" />
